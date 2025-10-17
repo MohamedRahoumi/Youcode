@@ -1,0 +1,85 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+body {
+  background-color: #0b0b1a;
+  color: #d1d1e0;
+}
+
+.roadmap {
+  text-align: center;
+  padding: 5.4rem 2rem;
+  
+}
+
+.roadmap h2 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  justify-items: center;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.year-box {
+  background: #C73293;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border: 2px solid #fff;
+}
+
+
+.year-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.year-box p {
+  font-size: 0.8rem;
+  color: #c0c0c0;
+  padding: 0 10px;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .year-box {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #0a0b25;
+  color: #888;
+  font-size: 14px;
+  border-top: 1px solid #1a1b3a;
+}
