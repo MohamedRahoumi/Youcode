@@ -29,3 +29,19 @@ function startTimer() {
   }, 1000);
 }
 
+function afficherWPM() {
+  const texteTape = inputEl.value;
+  let caracteresCorrects = 0;
+  
+  for (let i = 0; i < texteTape.length; i++) {
+    if (texteTape[i] === phrase[i]) {
+      caracteresCorrects++;
+    }
+  }
+  
+  const tempsMinutes = 60 / 60;
+  const wpm = Math.round((caracteresCorrects / 5) / tempsMinutes);
+  
+  wpmEl.textContent = `Wpm : ${wpm}`;
+}
+
