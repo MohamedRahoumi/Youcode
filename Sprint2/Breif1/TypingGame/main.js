@@ -15,3 +15,17 @@ phrase.split("").forEach(char => {
 
 const spans = document.querySelectorAll("span");
 
+function startTimer() {
+  timeEl.textContent = `Time : ${timeLeft}s`;
+  timer = setInterval(() => {
+    timeLeft--;
+    timeEl.textContent = `Time : ${timeLeft}s`;
+    
+    if (timeLeft <= 0) {
+      clearInterval(timer);
+      inputEl.disabled = true;
+      afficherWPM();
+    }
+  }, 1000);
+}
+
