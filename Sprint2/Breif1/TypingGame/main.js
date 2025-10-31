@@ -45,3 +45,22 @@ function afficherWPM() {
   wpmEl.textContent = `Wpm : ${wpm}`;
 }
 
+inputEl.addEventListener("input", () => {
+  if (!started) {
+    started = true;
+    startTimer();
+  }
+  
+  const inputText = inputEl.value;
+  spans.forEach((span, i) => {
+    const char = inputText[i];
+    span.classList.remove("correct", "faux");
+    if (char == null) return;
+    if (char === phrase[i]) {
+      span.classList.add("correct");
+    } 
+    else {
+      span.classList.add("faux");
+    }
+  });
+});
