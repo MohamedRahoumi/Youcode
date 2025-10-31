@@ -7,3 +7,11 @@ let timer = null;
 let timeLeft = 60;
 let started = false;
 
+phrase.split("").forEach(char => {
+  const span = document.createElement("span");
+  span.textContent = char;
+  textEl.appendChild(span);
+});
+
+const spans = document.querySelectorAll("span");
+
